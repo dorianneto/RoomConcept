@@ -1,8 +1,10 @@
 package com.roomconcept;
 
+import android.app.Activity;
 import com.facebook.react.ReactActivity;
 
 public class MainActivity extends ReactActivity {
+    public static Activity activity;
 
     /**
      * Returns the name of the main component registered from JavaScript.
@@ -10,6 +12,8 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
+        activity = this;
+
         return "RoomConcept";
     }
 }

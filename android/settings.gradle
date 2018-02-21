@@ -1,3 +1,5 @@
 rootProject.name = 'RoomConcept'
+include ':@remobile/react-native-splashscreen'
+project(':@remobile/react-native-splashscreen').projectDir = new File(settingsDir, '../node_modules/@remobile/react-native-splashscreen/android')
 
 include ':app'

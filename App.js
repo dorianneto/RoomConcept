@@ -11,7 +11,10 @@ import {
 //   Text,
 //   View
 } from 'react-native';
-import { Container, Button, Text } from 'native-base';
+import {
+  StackNavigator,
+} from 'react-navigation';
+import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text } from 'native-base';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -24,11 +27,29 @@ export default class App extends Component<{}> {
   render() {
     return (
       <Container>
-        <Button>
+        <Header>
+          <Left>
+            <Button transparent>
+              <Icon name='menu' />
+            </Button>
+          </Left>
+          <Body>
+            <Title>Header</Title>
+          </Body>
+          <Right />
+        </Header>
+        <Content>
           <Text>
-            Button
+            This is Content Section
           </Text>
-        </Button>
+        </Content>
+        <Footer>
+          <FooterTab>
+            <Button full>
+              <Text>Footer</Text>
+            </Button>
+          </FooterTab>
+        </Footer>
       </Container>
     );
   }
